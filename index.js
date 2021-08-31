@@ -34,7 +34,7 @@ const facultyArray = facultetsData.reduce((acc, { faculty }) => {
 //2. Создать массив всех предметов. Помним, что предметы у нас всегда уникальны (проверку на повторения делать не надо).
 
 const subjectsArray = facultetsData.reduce((acc, { subjects }) => {
-  return [...acc, subjects].flat();
+  return [...acc, ...subjects];
 }, []);
 
 //3. Посчитать общее количество студентов на всех факультетах.
