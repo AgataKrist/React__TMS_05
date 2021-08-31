@@ -42,3 +42,12 @@ const subjectsArray = facultetsData.reduce((acc, { subjects }) => {
 const studentsAmount = facultetsData.reduce((acc, { countStudents }) => {
   return acc + countStudents;
 }, 0);
+
+//4. Создать объект, где ключ это название факультета, а значение - предметы этого факультета.
+
+const getObjectFromData = facultetsData.reduce((acc, { faculty, subjects }) => {
+  return {
+    ...acc,
+    [faculty]: subjects,
+  };
+}, {});
