@@ -1,4 +1,4 @@
-const facultets = [
+const facultetsData = [
   {
     id: 1,
     faculty: "History department",
@@ -24,3 +24,9 @@ const facultets = [
     countStudents: 37,
   },
 ];
+
+//1. Создать массив всех факультетов.
+
+const faculty = facultetsData.reduce((acc, { faculty }) => {
+  return [...acc, faculty];
+}, []);
