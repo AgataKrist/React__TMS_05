@@ -30,3 +30,9 @@ const facultetsData = [
 const faculty = facultetsData.reduce((acc, { faculty }) => {
   return [...acc, faculty];
 }, []);
+
+//2. Создать массив всех предметов. Помним, что предметы у нас всегда уникальны (проверку на повторения делать не надо).
+
+const subjects = facultetsData.reduce((acc, { subjects }) => {
+  return [...acc, subjects].flat();
+}, []);
